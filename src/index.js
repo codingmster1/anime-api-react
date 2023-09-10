@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPlay, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faSpinner, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router } from "react-router-dom";
 
-library.add(faSpinner, faPlay);
+library.add(faSpinner, faPlay, faMagnifyingGlass);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

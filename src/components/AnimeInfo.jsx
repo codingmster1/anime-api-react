@@ -11,7 +11,7 @@ function AnimeInfo() {
   async function getInfo() {
     const query = `
       query ($id: Int) {
-        Media(id: $id, type: ANIME, isAdult: true) {
+        Media(id: $id, type: ANIME, isAdult: false) {
           id
           title {
             english

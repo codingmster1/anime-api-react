@@ -32,7 +32,7 @@ function Landing({ searchRedirect }) {
           hasNextPage
           perPage
         }
-        media(id: $id, search: $search, type: ANIME, isAdult: true, sort: ${option}) {
+        media(id: $id, search: $search, type: ANIME, isAdult: false, sort: ${option}) {
           id
           title {
             english
@@ -40,7 +40,7 @@ function Landing({ searchRedirect }) {
           coverImage {
             extraLarge
           }
-          bannerImage
+          
           popularity
           trending
           description
@@ -109,22 +109,17 @@ function Landing({ searchRedirect }) {
   return (
     <>
       <div className="header__container">
-        {trendingList.length > 0 ? (
+        
           <figure className="header__img--wrapper">
             <img
-              src={
-                trendingList[
-                  Math.floor(Math.random() * trendingList.length - 1)
-                ]?.bannerImage ||
-                {mainImg}
-              }
+              src={mainImg}
               className="header__img"
               alt=""
             />
           </figure>
-        ) : (
-          <Loading />
-        )}
+        
+          
+        
 
         <h1 className="title">All The Anime, One Search Engine</h1>
       </div>
